@@ -21,9 +21,9 @@ function ToyCard({ toy, onDeleteToy, onUpdateToy }) {
     fetch(`/toys/${id}`, {
       method: "PATCH",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify(updateObj),
+      body: JSON.stringify(updateObj)
     })
       .then((r) => r.json())
       .then((updatedToy) => onUpdateToy(updatedToy));
